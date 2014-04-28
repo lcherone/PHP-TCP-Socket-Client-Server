@@ -5,19 +5,16 @@ require('./lib/socketClient.class.php');
 $socket = new socketClient('127.0.0.1', 54321);
 
 $packet = array('controller'    => 'index',
-				'action'		=> 'index',
-				'subaction'		=> '',
-				'subaction_id'  => '',
-				'time'			=> time(),
-				'ip'			=> $_SERVER['SERVER_ADDR'],
-				);
+		'action'	=> 'index',
+		'subaction'	=> '',
+		'subaction_id'  => '',
+		'time'		=> time(),
+		'ip'		=> $_SERVER['SERVER_ADDR']);
 
-$responce = $socket->send(json_encode($packet));
+$response = $socket->send(json_encode($packet));
 
 $socket->report();
 
-
-///echo $responce;
-
+//echo $responce;
 //echo '<pre>'.print_r($socket,true).'</pre>';
 ?>
