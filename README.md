@@ -1,10 +1,11 @@
 PHP-UDP-Socket-Client-Server
 ============================
 
-A stripped down PHP UDP socket server and client; wrapped in a class, what is different from the basic socket examples 
-you see on http://www.php.net/manual/en/ref.sockets.php is that the server calls controllers, like in MVC, 
-which makes it easy to implement something other then a strrev() of what the client sent, kinda useless a moment but ill
-add something interesting, in later commits.
+A simple stripped down PHP UDP socket server and client; wrapped in a handy class. 
+
+Its different from the basic socket examples you see on http://www.php.net/manual/en/ref.sockets.php is that the server calls controllers, like in MVC, 
+which makes it easy to implement something other then a strrev() of what the client sent, kinda useless at moment but ill
+add something interesting in later commits.
 
 Example:
 ===
