@@ -15,6 +15,6 @@ $response = $socket->send(json_encode($packet));
 
 $socket->report();
 
-//echo $responce;
-//echo '<pre>'.print_r($socket,true).'</pre>';
+//echo $response;
+//echo '<pre>'.print_r($socket, true).'</pre>';
 ?>
