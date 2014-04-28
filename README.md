@@ -1,7 +1,7 @@
-PHP-UDP-Socket-Client-Server
+PHP-TCP-Socket-Client-Server
 ============================
 
-A simple stripped down PHP UDP socket server and client, that communicates in JSON format; wrapped in a handy class. 
+A simple stripped down PHP TCP socket server and client, that communicates in JSON format; wrapped in a handy class. 
 Server will parse the JSON and call controller based on route, currently its very bare and does nothing but sends JSON back.
 In later commits ill add something more interesting. 
 
