@@ -1,15 +1,14 @@
 PHP-UDP-Socket-Client-Server
 ============================
 
-A simple stripped down PHP UDP socket server and client; wrapped in a handy class. 
-
-Its different from the basic socket examples you see on http://www.php.net/manual/en/ref.sockets.php is that the server calls controllers, like in MVC, 
-which makes it easy to implement something other then a strrev() of what the client sent, kinda useless at moment but ill
-add something interesting in later commits.
+A simple stripped down PHP UDP socket server and client, that communicates in JSON format; wrapped in a handy class. 
+Server will parse the JSON and call controller based on route, currently its very bare and does nothing but sends JSON back.
+In later commits ill add something more interesting. 
 
 Example:
 ===
 **./index.php (Client)**
+Client builds and sends a JSON encoded packet.
 
     <?php
     require('./lib/socket.class.php');
@@ -25,7 +24,7 @@ Example:
     				'ip'		    => $_SERVER['SERVER_ADDR'],
     				);
     
-    $responce = $socket->send(json_encode($packet));
+    $response = $socket->send(json_encode($packet));
     
     $socket->report();
     ?>
@@ -38,5 +37,3 @@ Example:
     
     new socketServer("0.0.0.0", 54321);
     ?>
-
-
